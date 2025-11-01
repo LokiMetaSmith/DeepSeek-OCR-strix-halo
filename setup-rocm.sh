@@ -21,13 +21,18 @@ echo "--- 1. Project Repositories ---"
 echo "Installing Git LFS..."
 sudo apt-get update
 sudo apt-get install -y git-lfs
-git-lfs install
+git lfs install
 echo ""
 echo "Cloning DeepSeek-OCR source code..."
 git clone https://github.com/deepseek-ai/DeepSeek-OCR.git
 echo ""
-echo "Cloning DeepSeek-OCR model..."
+echo "Cloning DeepSeek-OCR model repository..."
 git clone https://huggingface.co/deepseek-ai/DeepSeek-OCR DeepSeek-OCR-model
+echo ""
+echo "Downloading large model files..."
+cd DeepSeek-OCR-model
+git lfs pull
+cd ..
 echo ""
 echo "----------------------------------------"
 echo ""
@@ -35,7 +40,7 @@ echo ""
 # --- Section 2: Dependencies ---
 echo "--- 2. Dependencies ---"
 echo "Installing Python dependencies into the virtual environment..."
-~/.venv/bin/pip3 install -r DeepSeek-OCR/requirements.txt
+pip3 install -r DeepSeek-OCR/requirements.txt
 echo ""
 echo "----------------------------------------"
 echo ""
