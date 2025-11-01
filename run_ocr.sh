@@ -14,15 +14,22 @@ echo "### DeepSeek-OCR ROCm Verification Script ###"
 echo "Timestamp: $(date)"
 echo ""
 
-# --- Section 1: Download Test Image ---
-echo "--- 1. Download Test Image ---"
+# --- Section 1: Activate Virtual Environment ---
+echo "--- 1. Activating Virtual Environment ---"
+source .venv/bin/activate
+echo ""
+echo "----------------------------------------"
+echo ""
+
+# --- Section 2: Download Test Image ---
+echo "--- 2. Download Test Image ---"
 wget https://static.simonwillison.net/static/2025/ft.jpeg -O test_image.jpeg
 echo ""
 echo "----------------------------------------"
 echo ""
 
-# --- Section 2: Run OCR ---
-echo "--- 2. Run OCR ---"
+# --- Section 3: Run OCR ---
+echo "--- 3. Run OCR ---"
 python3 run_ocr_amd.py test_image.jpeg
 echo ""
 echo "----------------------------------------"

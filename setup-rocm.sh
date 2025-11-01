@@ -16,8 +16,15 @@ echo "### AMD ROCm and DeepSeek-OCR Setup Script ###"
 echo "Timestamp: $(date)"
 echo ""
 
-# --- Section 1: Project Repositories ---
-echo "--- 1. Project Repositories ---"
+# --- Section 1: Activate Virtual Environment ---
+echo "--- 1. Activating Virtual Environment ---"
+source .venv/bin/activate
+echo ""
+echo "----------------------------------------"
+echo ""
+
+# --- Section 2: Project Repositories ---
+echo "--- 2. Project Repositories ---"
 echo "Installing Git LFS..."
 sudo apt-get update
 sudo apt-get install -y git-lfs
@@ -37,8 +44,8 @@ echo ""
 echo "----------------------------------------"
 echo ""
 
-# --- Section 2: Dependencies ---
-echo "--- 2. Dependencies ---"
+# --- Section 3: Dependencies ---
+echo "--- 3. Dependencies ---"
 echo "Installing Python dependencies into the virtual environment..."
 pip3 install -r DeepSeek-OCR/requirements.txt
 echo ""
