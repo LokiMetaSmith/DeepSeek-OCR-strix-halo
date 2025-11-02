@@ -66,7 +66,7 @@ echo ""
 # --- Section 3: Dependencies ---
 echo "--- 3. Dependencies ---"
 echo "Installing/verifying Python dependencies..."
-pip install -r DeepSeek-OCR/requirements.txt
+pip install --break-system-packages -r DeepSeek-OCR/requirements.txt
 echo ""
 echo "----------------------------------------"
 echo ""
