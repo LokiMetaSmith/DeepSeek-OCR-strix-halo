@@ -1,0 +1,5 @@
+*
+!nanochat/vision.py
+!nanochat/deepseek_modules/
+!tests/test_deepseek_port.py
+!.gitignore
